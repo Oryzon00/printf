@@ -6,11 +6,11 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 16:30:24 by ajung             #+#    #+#             */
-/*   Updated: 2021/11/28 17:24:42 by ajung            ###   ########.fr       */
+/*   Updated: 2021/11/28 19:56:13 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "../printf.h"
 
 int	ft_printf(const char *str, ...)
 {
@@ -26,7 +26,7 @@ int	ft_printf(const char *str, ...)
 		if (str[i] == '%')
 		{
 			i++;
-			what_var(str[i], &result, arg_list);
+			result += what_var(str[i], &result, arg_list);
 		}
 		else
 		{
@@ -39,23 +39,17 @@ int	ft_printf(const char *str, ...)
 	return (result);
 }
 
-void	what_var(char c, int *result, va_list arg_list)
+int	what_var(char c, int *result, va_list arg_list)
 {
 	if (c == 'c') //char
-	{
-		ft_putchar_fd((char)va_arg(arg_list, char), 1);
-		(*result)++;
-	}
+		return (ft_putchar_fd((char)va_arg(arg_list, int), 1));
 	else if (c == '%')
 	{
 		ft_putchar_fd('%', 1);
-		(*result)++;
+		return (1);
 	}
 	else if (c == 's') //string
-	{
-		ft_putstr_fd((char *)va_arg(arg_list, char *), 1);
-		(*result) += ft_strlen((const char *)va_arg(arg_list, char *)); //va_copy??
-	}
+		return (ft_putstr_pf(va_arg(arg_list, char * )));
 	else if (c == 'p') //void * en hexa
 	{
 		
@@ -66,7 +60,7 @@ void	what_var(char c, int *result, va_list arg_list)
 	}
 	else if (c == 'i') //int (base 10)
 	{
-		
+		return (ft_putnbr_pf(va_arg(arg_list, int)));
 	}
 	else if (c == 'u') //unsigned nb decimal (base 10)
 	{
@@ -76,4 +70,5 @@ void	what_var(char c, int *result, va_list arg_list)
 	{
 		
 	}
+	return (0);
 }
