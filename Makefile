@@ -1,4 +1,4 @@
-SRCS =
+SRCS = 
 
 OBJS = $(SRCS:.c=.o)
 
