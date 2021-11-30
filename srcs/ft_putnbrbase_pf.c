@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 14:07:02 by ajung             #+#    #+#             */
-/*   Updated: 2021/11/30 15:54:09 by ajung            ###   ########.fr       */
+/*   Updated: 2021/11/30 16:15:38 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,8 @@ int	ft_putnbrBASE_pf (unsigned int nb)
 	}
 	else
 	{
-		output += ft_putnbrbase_pf(nb / 16);
-		output += ft_putnbrbase_pf(nb % 16);
+		output += ft_putnbrBASE_pf(nb / 16);
+		output += ft_putnbrBASE_pf(nb % 16);
 	}
 	return (output);
 }

@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 19:26:04 by ajung             #+#    #+#             */
-/*   Updated: 2021/11/29 18:02:45 by ajung            ###   ########.fr       */
+/*   Updated: 2021/11/30 16:06:46 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,22 @@ static int	is_int_min(void)
 {
 	write(1, "-2147483648", 11);
 	return (11);
+}
+
+int	ft_uputnbr_pf(unsigned int n)
+{
+	int		output;
+
+	output = 0;
+	if (n < 10)
+	{
+		ft_putchar_pf(n + '0');
+		output++;
+	}
+	else
+	{
+		output += ft_putnbr_pf(n / 10);
+		output += ft_putnbr_pf(n % 10);
+	}
+	return (output);
 }

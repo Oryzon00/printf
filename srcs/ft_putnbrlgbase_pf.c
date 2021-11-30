@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_uputnbr_pf.c                                    :+:      :+:    :+:   */
+/*   ft_putnbrlgbase_pf.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/29 18:04:45 by ajung             #+#    #+#             */
-/*   Updated: 2021/11/29 18:05:49 by ajung            ###   ########.fr       */
+/*   Created: 2021/11/30 16:31:29 by ajung             #+#    #+#             */
+/*   Updated: 2021/11/30 16:40:08 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../printf.h"
-
-int	ft_uputnbr_pf(unsigned int n)
+int	ft_putnbrlgbase_pf (unsigned long nb)
 {
 	int		output;
 
 	output = 0;
-	if (n < 10)
+	if (nb < 10)
 	{
-		ft_putchar_pf(n + '0');
+		ft_putchar_pf(nb + '0');
 		output++;
+	}
+	else if (nb < 16)
+	{
+		ft_putchar_pf(nb + 'a' - 10);
+		output ++;
 	}
 	else
 	{
-		output += ft_putnbr_pf(n / 10);
-		output += ft_putnbr_pf(n % 10);
+		output += ft_putnbrlgbase_pf(nb / 16);
+		output += ft_putnbrlgbase_pf(nb % 16);
 	}
 	return (output);
 }
