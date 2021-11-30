@@ -6,11 +6,11 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 17:09:00 by ajung             #+#    #+#             */
-/*   Updated: 2021/11/29 17:10:00 by ajung            ###   ########.fr       */
+/*   Updated: 2021/11/30 17:10:30 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../printf.h"
+#include "../ft_printf.h"
 
 int	ft_putchar_pf(char c)
 {
