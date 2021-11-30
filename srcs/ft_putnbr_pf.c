@@ -6,11 +6,11 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 19:26:04 by ajung             #+#    #+#             */
-/*   Updated: 2021/11/30 16:06:46 by ajung            ###   ########.fr       */
+/*   Updated: 2021/11/30 17:10:34 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../printf.h"
+#include "../ft_printf.h"
 static int	is_int_min(void);
 
 int	ft_putnbr_pf(int n)

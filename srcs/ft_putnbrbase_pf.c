@@ -6,11 +6,11 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 14:07:02 by ajung             #+#    #+#             */
-/*   Updated: 2021/11/30 16:15:38 by ajung            ###   ########.fr       */
+/*   Updated: 2021/11/30 17:10:38 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../printf.h"
+#include "../ft_printf.h"
 
 int	ft_putnbrbase_pf (unsigned int nb)
 {
