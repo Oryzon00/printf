@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 16:30:24 by ajung             #+#    #+#             */
-/*   Updated: 2021/11/29 18:19:52 by ajung            ###   ########.fr       */
+/*   Updated: 2021/11/30 15:55:30 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,14 +54,10 @@ int	what_var(char c, va_list arg_list)
 	else if (c == 'i' || c == 'd')
 		return (ft_putnbr_pf(va_arg(arg_list, int)));
 	else if (c == 'u')
-		return(ft_uputnbr_pf(va_arg(arg_list, unsigned int)));
-	else if (c == 'x') //nb hexadecimal (base 16)
-	{
-		
-	}
-	else if (c == 'X') //nb hexa en MAJ
-	{
-		
-	}
+		return (ft_uputnbr_pf(va_arg(arg_list, unsigned int)));
+	else if (c == 'x')
+		return (ft_putnbrbase_pf(va_arg(arg_list, unsigned int)));
+	else if (c == 'X')
+		return (ft_putnbrBASE_pf(va_arg(arg_list, unsigned int)));
 	return (0);
 }

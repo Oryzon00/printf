@@ -6,7 +6,7 @@
 #    By: ajung <ajung@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/29 18:03:55 by ajung             #+#    #+#              #
-#    Updated: 2021/11/29 18:06:30 by ajung            ###   ########.fr        #
+#    Updated: 2021/11/30 15:24:11 by ajung            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ SRCS =	srcs/ft_printf.c \
 		srcs/ft_putnbr_pf.c \
 		srcs/ft_putchar_pf.c \
 		srcs/ft_uputnbr_pf.c \
+		srcs/ft_putnbrbase_pf.c \
 
 OBJS = $(SRCS:.c=.o)
 
