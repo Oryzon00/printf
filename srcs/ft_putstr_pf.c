@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 18:38:11 by ajung             #+#    #+#             */
-/*   Updated: 2021/11/30 17:10:47 by ajung            ###   ########.fr       */
+/*   Updated: 2021/11/30 18:27:42 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@ int	ft_putstr_pf(char *s)
 	int	i;
 	int	len_str;
 
+	if (!s)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
 	len_str = 0;
 	if (!s)
 		return (0);
