@@ -6,12 +6,13 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 16:31:29 by ajung             #+#    #+#             */
-/*   Updated: 2021/11/30 17:10:43 by ajung            ###   ########.fr       */
+/*   Updated: 2021/12/01 15:45:59 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
-int	ft_putnbrlgbase_pf (unsigned long nb)
+
+int	ft_putnbrlgbase_pf(unsigned long nb)
 {
 	int		output;
 

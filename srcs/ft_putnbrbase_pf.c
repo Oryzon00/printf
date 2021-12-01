@@ -6,13 +6,13 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 14:07:02 by ajung             #+#    #+#             */
-/*   Updated: 2021/11/30 17:10:38 by ajung            ###   ########.fr       */
+/*   Updated: 2021/12/01 15:50:27 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int	ft_putnbrbase_pf (unsigned int nb)
+int	ft_putnbrbase_pf(unsigned int nb)
 {
 	int		output;
 
@@ -35,7 +35,7 @@ int	ft_putnbrbase_pf (unsigned int nb)
 	return (output);
 }
 
-int	ft_putnbrBASE_pf (unsigned int nb)
+int	ft_putnbrbase_maj_pf(unsigned int nb)
 {
 	int		output;
 
@@ -52,8 +52,8 @@ int	ft_putnbrBASE_pf (unsigned int nb)
 	}
 	else
 	{
-		output += ft_putnbrBASE_pf(nb / 16);
-		output += ft_putnbrBASE_pf(nb % 16);
+		output += ft_putnbrbase_maj_pf(nb / 16);
+		output += ft_putnbrbase_maj_pf(nb % 16);
 	}
 	return (output);
 }
